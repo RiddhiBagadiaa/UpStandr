@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".category">
+    tools:context=".Profile">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/imageButton3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -52,7 +52,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/imageButton4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -73,107 +73,104 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="What's wrong?"
-                    android:textAlignment="center"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:text="If you call for help, others need to be able to find you in a crowd. Please provide some basic indentifying information. You will be anonymous unless you request help for yourself." />
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingBottom="15dp">
+                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/alcohol"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <EditText
+                    android:id="@+id/FirstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Alcohol" />
+                    android:ems="10"
+                    android:hint="First/Preferred Name"
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingBottom="15dp">
+                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/drugs"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <EditText
+                    android:id="@+id/Gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Drugs" />
+                    android:ems="10"
+                    android:hint="Gender"
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingBottom="15dp">
+                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/harassment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <EditText
+                    android:id="@+id/heightbuild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Harassment" />
-
+                    android:ems="10"
+                    android:hint="Height and Build"
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingBottom="15dp">
+                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/other"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <EditText
+                    android:id="@+id/Other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Something Else" />
+                    android:ems="10"
+                    android:hint="Hair, Skin, Ethnicity, etc"
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical" />
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <Button
+                    android:id="@+id/updateProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Update Information" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:orientation="horizontal"
-            android:paddingLeft="40dp"
-            android:paddingTop="30dp"
-            android:paddingRight="40dp"
-            android:paddingBottom="30dp">
-
-            <Button
-                android:id="@+id/nineOneOne"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3.5"
-                android:text="Call 911" />
-        </LinearLayout>
+            android:orientation="vertical"/>
 
     </LinearLayout>
 
