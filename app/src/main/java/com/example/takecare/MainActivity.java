@@ -17,6 +17,8 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -100,16 +102,19 @@ public class MainActivity extends AppCompatActivity {
         checkLocationPermission();
         //DatabaseReference myRef = database.getReference("users");
 
-        List<AuthUI.IdpConfig> providers = Arrays.asList(
-                new AuthUI.IdpConfig.EmailBuilder().build(),
-                new AuthUI.IdpConfig.GoogleBuilder().build());
+        if(userLoggedIn==null){
+            List<AuthUI.IdpConfig> providers = Arrays.asList(
+                    new AuthUI.IdpConfig.EmailBuilder().build(),
+                    new AuthUI.IdpConfig.GoogleBuilder().build());
 
-        startActivityForResult(
-                AuthUI.getInstance()
-                        .createSignInIntentBuilder()
-                        .setAvailableProviders(providers)
-                        .build(),
-                RC_SIGN_IN);
+            startActivityForResult(
+                    AuthUI.getInstance()
+                            .createSignInIntentBuilder()
+                            .setAvailableProviders(providers)
+                            .build(),
+                    RC_SIGN_IN);
+        }
+
 
 
 
@@ -131,6 +136,43 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         //LocationManager lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        final Button helpButton = (Button) findViewById(R.id.helpFriend);
+        helpButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                //Intent activityChangeIntent = new Intent(MainActivity.this, category.class);
+                Intent intent = new Intent(MainActivity.this, category.class);
+                intent.putExtra("UserID", userLoggedIn.getUid());
+                intent.putExtra("self", false);
+                // currentContext.startActivity(activityChangeIntent);
+                MainActivity.this.startActivity(intent);
+            }
+        });
+
+        final Button helpMe = (Button) findViewById(R.id.helpMe);
+        helpMe.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                //Intent activityChangeIntent = new Intent(MainActivity.this, help_sent_self.class);
+                Intent intent = new Intent(MainActivity.this, help_sent_self.class);
+                intent.putExtra("UserID", userLoggedIn.getUid());
+                intent.putExtra("self", true);
+                // currentContext.startActivity(activityChangeIntent);
+
+                MainActivity.this.startActivity(intent);
+            }
+        });
+        final Button profile = (Button) findViewById(R.id.profileEdit2);
+        profile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Intent activityChangeIntent = new Intent(MainActivity.this, profileInfo.class);
+                // currentContext.startActivity(activityChangeIntent);
+
+                MainActivity.this.startActivity(activityChangeIntent);
+            }
+        });
+
 
         System.out.println("DONE");
         //myRef.setValue("Hello, World!");
@@ -342,6 +384,8 @@ public class MainActivity extends AppCompatActivity {
         //db.collection("users").document();
 
     }
+
+
 
 }
 

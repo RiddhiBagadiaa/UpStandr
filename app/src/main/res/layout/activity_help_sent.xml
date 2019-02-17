@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@xml/background_color"
-    tools:context=".category">
-
-
+    tools:context=".help_sent"
+    android:background="@xml/background_color">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +29,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.5"
+                    android:layout_weight="2"
                     android:orientation="horizontal"
                     android:paddingLeft="15dp"
                     android:paddingTop="15dp"
@@ -50,21 +48,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.25"
+                    android:layout_weight="1"
                     android:orientation="horizontal"></LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight=".5"
+                    android:layout_weight="2"
                     android:orientation="horizontal"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="15dp">
+                    android:padding="15dp">
 
                     <Button
-                        android:id="@+id/profileEdit"
+                        android:id="@+id/profileEdit3"
                         style="@style/Widget.AppCompat.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -82,14 +77,14 @@
                 android:paddingRight="15dp">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/ReportSent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="What's wrong?"
+                    android:text="Upstanders Notified"
                     android:textAlignment="center"
-                    android:textColor="@color/common_google_signin_btn_text_dark_default"
                     android:textSize="36sp"
+                    android:textColor="#ffffff"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -110,16 +105,27 @@
                 android:orientation="vertical"
                 android:paddingBottom="15dp">
 
-                <Button
-                    android:id="@+id/alcohol"
+                <TextView
+                    android:id="@+id/upstandersNearby"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_alcedit"
-                    android:text="Alcohol"
+                    android:layout_height="wrap_content"
+                    android:text='"X Upstanders Notified" Placeholder' />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="If it's safe, please tell us more about the situation"
                     android:textAlignment="center"
-                    android:textColor="@color/common_google_signin_btn_text_dark_default"
-                    android:textSize="24sp"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -130,17 +136,15 @@
                 android:orientation="vertical"
                 android:paddingBottom="15dp">
 
-                <Button
-                    android:id="@+id/alcohol2"
+                <EditText
+                    android:id="@+id/victimLocation"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_drugiconnorm"
-                    android:text="Drugs"
-                    android:textAlignment="center"
-                    android:textColor="@color/common_google_signin_btn_text_dark_default"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Where is this happening? (Be specific)"
+                    android:inputType="text"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
             </LinearLayout>
 
             <LinearLayout
@@ -150,17 +154,15 @@
                 android:orientation="vertical"
                 android:paddingBottom="15dp">
 
-                <Button
-                    android:id="@+id/alcohol3"
+                <EditText
+                    android:id="@+id/victimMisc"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_harassiconnorm"
-                    android:text="Harassment"
-                    android:textAlignment="center"
-                    android:textColor="@color/common_google_signin_btn_text_dark_default"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Who needs help? (Describe them)"
+                    android:inputType="text"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
             </LinearLayout>
 
             <LinearLayout
@@ -168,26 +170,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingBottom="15dp">
+                android:paddingBottom="15dp"/>
 
-                <Button
-                    android:id="@+id/alcohol4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_othericonnorm"
-                    android:text="  Something Else"
-                    android:textAlignment="center"
-                    android:textColor="@color/common_google_signin_btn_text_dark_default"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical" />
         </LinearLayout>
 
         <LinearLayout
@@ -206,16 +190,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/ic_911_2"
-                android:ellipsize="marquee"
+                android:backgroundTint="@color/colorAccent"
                 android:hapticFeedbackEnabled="true"
-                android:text="911-Emergency   "
-                android:textAlignment="textEnd"
+                android:text="Emergency Call"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:textColor="@color/common_google_signin_btn_text_dark_default"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

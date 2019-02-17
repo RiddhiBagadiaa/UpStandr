@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">takeCare</string>
-    <string name="title_location_permission">Location Permissions</string>
-    <string name="text_location_permission">Upstandr works by alerting you when people near you need help, or sending your location to other people when you need help.</string>
+    <string name="title_location_permission">Location Access</string>
+    <string name="text_location_permission">Upstandr works by using your location.</string>
     <string name="ok">OK</string>
 </resources>
