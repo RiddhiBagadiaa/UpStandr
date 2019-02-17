@@ -27,10 +27,12 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/back"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:padding="15dp">
 
                     <Button
                         android:id="@+id/back2"

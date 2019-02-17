@@ -20,7 +20,7 @@ public class profileInfo extends AppCompatActivity {
                 // Perform action on click
                 Intent activityChangeIntent = new Intent(profileInfo.this, MainActivity.class);
 
-                // currentContext.startActivity(activityChangeIntent);
+                // currentContet.startActivity(activityChangeIntent);
 
                 profileInfo.this.startActivity(activityChangeIntent);
             }
