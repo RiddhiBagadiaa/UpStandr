@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                Intent activityChangeIntent = new Intent(MainActivity.this, Profile.class);
+                Intent activityChangeIntent = new Intent(MainActivity.this, category.class);
 
                 // currentContext.startActivity(activityChangeIntent);
 

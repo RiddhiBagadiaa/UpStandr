@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@xml/background_color"
     tools:context=".category">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,35 +31,45 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp">
 
-                    <ImageButton
-                        android:id="@+id/imageButton"
+                    <Button
+                        android:id="@+id/back"
+                        style="@style/Widget.AppCompat.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@android:drawable/btn_dialog" />
+                        android:background="@drawable/ic_backarrow" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.5"
+                    android:layout_weight="0.25"
                     android:orientation="horizontal"></LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_weight=".5"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp">
 
-                    <ImageButton
-                        android:id="@+id/imageButton2"
+                    <Button
+                        android:id="@+id/profileEdit"
+                        style="@style/Widget.AppCompat.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@android:drawable/btn_dialog" />
+                        android:background="@drawable/ic_usericon" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -75,6 +88,7 @@
                     android:layout_weight="1"
                     android:text="What's wrong?"
                     android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
                     android:textSize="36sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -101,7 +115,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Alcohol" />
+                    android:background="@drawable/ic_alcedit"
+                    android:text="Alcohol"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,11 +131,16 @@
                 android:paddingBottom="15dp">
 
                 <Button
-                    android:id="@+id/drugs"
+                    android:id="@+id/alcohol2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Drugs" />
+                    android:background="@drawable/ic_drugiconnorm"
+                    android:text="Drugs"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -127,12 +151,16 @@
                 android:paddingBottom="15dp">
 
                 <Button
-                    android:id="@+id/harassment"
+                    android:id="@+id/alcohol3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Harassment" />
-
+                    android:background="@drawable/ic_harassiconnorm"
+                    android:text="Harassment"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -143,11 +171,16 @@
                 android:paddingBottom="15dp">
 
                 <Button
-                    android:id="@+id/other"
+                    android:id="@+id/alcohol4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Something Else" />
+                    android:background="@drawable/ic_othericonnorm"
+                    android:text="  Something Else"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -168,11 +201,19 @@
             android:paddingBottom="30dp">
 
             <Button
-                android:id="@+id/nineOneOne"
+                android:id="@+id/nineOneOne2"
+                style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="3.5"
-                android:text="Call 911" />
+                android:layout_weight="1"
+                android:background="@drawable/ic_911_2"
+                android:ellipsize="marquee"
+                android:hapticFeedbackEnabled="true"
+                android:text="911-Emergency   "
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="24sp" />
         </LinearLayout>
 
     </LinearLayout>
