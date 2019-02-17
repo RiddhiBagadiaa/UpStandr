@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@xml/background_color1"
     tools:context=".category">
 
     <LinearLayout
@@ -75,6 +76,7 @@
                     android:layout_weight="1"
                     android:text="What's wrong?"
                     android:textAlignment="center"
+                    android:textColor="#ffffff"
                     android:textSize="36sp"
                     android:textStyle="bold" />
             </LinearLayout>

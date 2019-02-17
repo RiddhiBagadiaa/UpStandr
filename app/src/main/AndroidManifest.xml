@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profile"></activity>
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/background_color1" />
+
+        <activity android:name=".Profile" />
         <activity android:name=".category" />
         <activity android:name=".MainActivity">
             <intent-filter>
